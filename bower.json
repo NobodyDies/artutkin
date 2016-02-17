@@ -1,0 +1,24 @@
+{
+  "name": "artutkin",
+  "authors": [
+    "Khamit <nobodydies.ufa@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "backbone": "^1.2.3",
+    "handlebars": "^4.0.5"
+  }
+}
