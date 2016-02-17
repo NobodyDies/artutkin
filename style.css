@@ -44,17 +44,22 @@ a {
   height: 110px;
   width: 100%;
   display:table;
+  table-layout: fixed;
 }
 .nav li {
-  height: 100%;
   background-color: #e0e0e0;
   display: table-cell;
   text-align: center;
   box-sizing: border-box;
+  border-left: 1px solid #757575;
+}
+.nav li :last-child {
+  border-left: none;
 }
 .nav li a {
   display: block;
   height: 100%;
+  padding-top: 1px;
 }
 .nav li.active {
   border: 3px solid #757575;

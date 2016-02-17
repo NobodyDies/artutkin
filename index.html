@@ -10,66 +10,47 @@
 <body>
   <div class="main_wrapper">
     <div class="sidebar">
-      <ul>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-      </ul>
     </div>
     <div class="main_content">
-      <p>name</p>
-      <p>age</p>
     </div>
   </div>
   <div class="bottom_wrapper">
     <ul class="nav">
-      <li>
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
-      <li class="active">
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <p class="name">test</p>
-          <p class="age">infinity</p>
-        </a>
-      </li>
     </ul>
     <ul class="controls">
-      <li><a href="#"> < </a></li>
-      <li><a href="#"> 2 </a></li>
-      <li><a href="#"> > </a></li>
     </ul>
   </div>
+
+  <script type="text/x-handlebars-template" id="NavItemTemplate">
+      <a href="#id{{this.id}}">
+        <p class="name">
+          {{this.first_name}} <br>
+          {{this.last_name}}
+        </p>
+        <p class="age">{{this.age}}</p>
+      </a>
+  </script>
+  <script type="text/x-handlebars-template" id="SidebarTemplate">
+    <ul>
+      <li>{{this.first_name}}</li>
+      <li>{{this.last_name}}</li>
+      <li>{{this.age}}</li>
+      <li>{{this.location}}</li>
+    </ul>
+  </script>
+  <script type="text/x-handlebars-template" id="MainContentTemplate">
+    <p>{{this.first_name}} {{this.last_name}}</p>
+    <p>{{this.age}}</p>
+  </script>
+  <script type="text/x-handlebars-template" id="ControlsTemplate">
+    <li>{{#if this.prev }}<a href="#id{{ this.prev }}"> < </a>{{/if}}</li>
+    <li><a> {{ this.current }} </a></li>
+    <li>{{#if this.next }}<a href="#id{{ this.next }}"> > </a>{{/if}}</li>
+  </script>
+  <script src="/js/vendor/jquery.min.js" charset="utf-8"></script>
+  <script src="/js/vendor/handlebars.min.js" charset="utf-8"></script>
   <script src="/js/vendor/underscore-min.js" charset="utf-8"></script>
   <script src="/js/vendor/backbone-min.js" charset="utf-8"></script>
-  <script src="/js/vendor/handlebars.min.js" charset="utf-8"></script>
   <script src="/js/app.js" charset="utf-8"></script>
 </body>
 
